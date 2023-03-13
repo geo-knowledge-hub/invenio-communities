@@ -14,6 +14,7 @@ from datetime import timedelta
 from invenio_i18n import lazy_gettext as _
 
 from invenio_communities.communities.services import facets
+from invenio_communities.permissions import CommunityPermissionPolicy
 
 COMMUNITIES_ROUTES = {
     "frontpage": "/communities",
@@ -79,6 +80,8 @@ COMMUNITIES_SORT_OPTIONS = {
 }
 """Definitions of available record sort options."""
 
+RDM_PERMISSION_POLICY = CommunityPermissionPolicy
+"""Override the default record permission policy."""
 
 COMMUNITIES_ROLES = [
     dict(
